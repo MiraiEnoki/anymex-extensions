@@ -159,7 +159,7 @@ final genres = genreLinks
   result.description = description;
   result.status = status == "Releasing" ? MStatus.ongoing : MStatus.completed;
   result.genre = genres;
-  result.chapters = chapters;
+  result.chapters = chapters.reversed.toList();
   
   return result;
 }
