@@ -10,7 +10,7 @@ Source _vumetoSource = Source(
   lang: "en",
   typeSource: "single",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/src/en/vumeto/icon.png",
+      "https://vumeto.com/pwa/icons/icon_x512.png",
   sourceCodeUrl: _vumetoSourceCodeUrl,
   version: _vumetoVersion,
   itemType: ItemType.anime,
