@@ -1,7 +1,7 @@
 import '../../../../../model/source.dart';
 
 Source get vumetoSource => _vumetoSource;
-const _vumetoVersion = "0.0.2";
+const _vumetoVersion = "0.0.3";
 const _vumetoSourceCodeUrl =
     "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/src/en/vumeto/vumeto.dart";
 Source _vumetoSource = Source(
