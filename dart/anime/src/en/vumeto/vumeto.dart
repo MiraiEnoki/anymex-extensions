@@ -169,62 +169,6 @@ final genres = genreLinks
   final RegExp exp = RegExp(r'<[^>]*>', multiLine: true, caseSensitive: false);
   return htmlString.replaceAll(exp, '').trim();
 }
-
-  
-List<MChapter> getChaps(MDocument document, String url) {
-  List<MChapter> chapters = [];
-  final scripts = document.getElementsByTagName("script");
-
-  String jsonData = "";
-  for (var script in scripts!) {
-    if (script.text!.contains("episodesData")) {
-      final regex = RegExp(r'self\.__next_f\.push\(\[1,".*?",null,(.*?)\]\)',
-          dotAll: true);
-      print("Found episodesData in script!");
-      final match = regex.firstMatch(script.text!);
-
-      if (match != null && match.groupCount >= 1) {
-        String cleaned = match.group(1)!.replaceAll(r'\', '');
-
-        jsonData = cleaned.substring(0, cleaned.length - 3);
-        break;
-      } else {
-        print("Regex did not match.");
-      }
-    }
-  }
-
-  try {
-    Map<String, dynamic> parsedData = json.decode(jsonData);
-    List<dynamic> episodesData = parsedData['episodesData'];
-    for (var ep in episodesData) {
-      MChapter ch = MChapter();
-//      ch.name = "Episode ${ep['episodeNo']}: ${ep['title']}";
- //     ch.url = url.split('?').first + '?ep=' + ep['episodeNo'];
-       ch.name = "Episode";
-       ch.url = '';
-
-      final existingChapter = chapters.firstWhere(
-        (c) => c.url == ch.url,
-        orElse: () => null,
-      );
-      
-      return chapters;
-
-      if (existingChapter == null) {
-        chapters.add(ch);
-        print("Extracted: ${ch.title} -> ${ch.url}");
-      } else {
-        print("Chapter already exists: ${ch.title}");
-      }
-    }
-    return chapters;
-  } catch (e) {
-    print("JSON Parsing Error: $e");
-  }
-
-  return chapters;
-}
   
   // For novel html content
   @override
@@ -338,7 +282,8 @@ Future<List<MVideo>> getVideoList(String url) async {
 List<MVideo> data = extractedData.map((videoData) {
   MVideo video = MVideo(); 
 
-  video.url = videoData['m3u8Url'] ?? '';  
+  video.url = videoData['m3u8Url'] ?? '';
+  video.url = video.url.replaceAll('g4fv.biananset.net', 'stormywind74.xyz').replaceAll('fds.biananset.net', 'stormywind74.xyz');
   video.quality = videoData['serverName'] ?? '';  
   video.originalUrl = videoData['m3u8Url'] ?? '';
 
