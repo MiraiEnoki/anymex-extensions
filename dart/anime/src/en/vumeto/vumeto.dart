@@ -12,7 +12,11 @@ class Vumeto extends MProvider {
   bool get supportsLatest => false;
 
   @override
-  Map<String, String> get headers => {};
+  Map<String, String> get headers => {
+    "Cookie": "_ga=GA1.1.2064759276.1741681027; _ga_5HMNDC3ZE4=GS1.1.1741824276.8.1.1741824749.0.0.0",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+    "Referer": "https://vumeto.com/"
+  };
   
   @override
   Future<MPages> getPopular(int page) async {
@@ -69,7 +73,7 @@ List<MManga> scrapeAnimeList(MDocument document) {
 @override
 Future<MManga> getDetail(String url) async {
   final uri = Uri.parse(url);
-  final resp = await client.get(uri);
+  final resp = await client.get(uri, headers);
   final document = parseHtml(resp.body);
   final mainContainer = document.selectFirst(".mx-auto.w-full.p-2"); 
   
@@ -185,7 +189,7 @@ final genres = genreLinks
 @override
 Future<List<MVideo>> getVideoList(String url) async {
   try {
-    final resp = await client.get(Uri.parse(url));
+    final resp = await client.get(Uri.parse(url), headers);
     
     final document = parseHtml(resp.body);
     
@@ -283,7 +287,7 @@ List<MVideo> data = extractedData.map((videoData) {
   MVideo video = MVideo(); 
 
   video.url = videoData['m3u8Url'] ?? '';
-  video.url = video.url.replaceAll(RegExp(r'\b[a-zA-Z0-9-]+\.biananset\.[a-zA-Z0-9-]+\b'), 'stormywind74.xyz');
+  video.url = video.url.replaceAll(RegExp(r'\b[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+\.net\b'), 'stormywind74.xyz');
   video.quality = videoData['serverName'] ?? '';  
   video.originalUrl = videoData['m3u8Url'] ?? '';
 
