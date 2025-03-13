@@ -283,7 +283,7 @@ List<MVideo> data = extractedData.map((videoData) {
   MVideo video = MVideo(); 
 
   video.url = videoData['m3u8Url'] ?? '';
-  video.url = video.url.replaceAll('g4fv.biananset.net', 'stormywind74.xyz').replaceAll('fds.biananset.net', 'stormywind74.xyz');
+  video.url = video.url.replaceAll(RegExp(r'\b[a-zA-Z0-9-]+\.biananset\.[a-zA-Z0-9-]+\b'), 'stormywind74.xyz');
   video.quality = videoData['serverName'] ?? '';  
   video.originalUrl = videoData['m3u8Url'] ?? '';
 
