@@ -224,7 +224,7 @@ Future<List<MVideo>> getVideoList(String url) async {
     
     if (episodesData.isNotEmpty) {
       final index = int.parse(url.split('ep=').last);
-      final episode = episodesData[index];
+      final episode = episodesData[index - 1];
       
       for (var sub in episode['sub']) {
 
