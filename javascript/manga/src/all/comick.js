@@ -47,7 +47,7 @@ const mangayomiSources = [
         },
         "baseUrl": "https://comick.io",
         "apiUrl": "https://api.comick.fun",
-        "iconUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/icon/all.comick.png",
+        "iconUrl": "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/javascript/icon/all.comick.png",
         "typeSource": "single",
         "itemType": 0,
         "version": "0.0.9",

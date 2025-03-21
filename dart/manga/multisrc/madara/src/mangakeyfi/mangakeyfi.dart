@@ -8,7 +8,7 @@ Source _mangakeyfiSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/mangakeyfi/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/mangakeyfi/icon.png",
   dateFormat: "d MMM yyy",
   dateFormatLocale: "tr",
 );

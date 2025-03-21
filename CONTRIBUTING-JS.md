@@ -1,6 +1,6 @@
 # Contributing
 
-This guide have some instructions and tips on how to create a new Mangayomi extension on JavaScript extension.
+This guide have some instructions and tips on how to create a new AnymeX extension on JavaScript extension.
 
 ## Prerequisites
 
@@ -10,20 +10,20 @@ Before starting please have installed the recent desktop version of the mangayom
 ### Writing your extension
 1. Open the app.
 2. Go to extension tab : 
-![1](https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/screenshots/1.png)
+![1](https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/screenshots/1.png)
 3. then click `+` and you will see : 
-![2](https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/screenshots/2.png)
+![2](https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/screenshots/2.png)
 4. Fill in the fields with your new source that you would like to create,
-![3](https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/screenshots/3.png)
+![3](https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/screenshots/3.png)
 NB: only the `ApiUrl` field is optional
 then click on save
 5. you will see your new source in the extension list
-![4](https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/screenshots/4.png)
+![4](https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/screenshots/4.png)
 click to open settings
 6. After click on edit code
-![5](https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/screenshots/5.png)
+![5](https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/screenshots/5.png)
 7. Finally you can now write the extension
-![6](https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/screenshots/6.png)
+![6](https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/screenshots/6.png)
 - This page contains three parts: 
     - Code editor: where you will write your code 
     - Fecth result: where you will test the different implemented methods by having a result in the expected format
@@ -35,7 +35,7 @@ Once extension is ready you can relocate your code into `mangayomi-extension` pr
 
 | Field | Description |
 | ----- | ----------- |
-| `name` | Name displayed in the "Sources" tab in Mangayomi. |
+| `name` | Name displayed in the "Sources" tab in AnymeX. |
 | `baseUrl` | Base URL of the source without any trailing slashes. |
 | `apiUrl` | (Optional, defaults is empty) Api URL of the source with trailing slashes. |
 | `lang` | An ISO 639-1 compliant language code (two letters in lower case in most cases, but can also include the country/dialect part by using a simple dash character). |
@@ -110,9 +110,9 @@ a.k.a. the Latest source entry point in the app (invoked by tapping on the "Late
 
 ## Example sources that can help you understand how to create your source
 
-- [Example](https://github.com/kodjodevf/mangayomi-extensions/blob/main/javascript/anime/src/de/aniworld.js)
+- [Example](https://github.com/MiraiEnoki/anymex-extensions/blob/main/javascript/anime/src/de/aniworld.js)
   of HTML parsing using HTML DOM selector.
-- [Example](https://github.com/kodjodevf/mangayomi-extensions/blob/main/javascript/anime/src/en/allanime.js)
+- [Example](https://github.com/MiraiEnoki/anymex-extensions/blob/main/javascript/anime/src/en/allanime.js)
   of Json API usage.
 
   
@@ -156,7 +156,7 @@ Example:
 const htmlString = ` 
 <html lang="en">
 <body>
-<div><a href='https://github.com/kodjodevf'>author</a></div>
+<div><a href='https://github.com/MiraiEnoki'>author</a></div>
 <div class="head">div head</div>
 <div class="container">
     <table>
@@ -179,11 +179,11 @@ const htmlString = `
 </html>`
 
 const document = new Document(htmlString);
-console.log(document.selectFirst("a").attr("href")); // https://github.com/kodjodevf
+console.log(document.selectFirst("a").attr("href")); // https://github.com/MiraiEnoki
 console.log(document.selectFirst("td").text); // 1
 
 ```
-See [`dom_selector`](https://github.com/kodjodevf/mangayomi/blob/main/lib/eval/javascript/dom_selector.dart) to see available methods.
+See [`dom_selector`](https://github.com/MiraiEnoki/mangayomi/blob/main/lib/eval/javascript/dom_selector.dart) to see available methods.
 
 
 ### String utils

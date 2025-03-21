@@ -9,7 +9,7 @@ Source _kamisamaexplorerSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/kamisamaexplorer/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/kamisamaexplorer/icon.png",
   dateFormat: "dd 'de' MMMM 'de' yyyy",
   dateFormatLocale: "pt-br",
 );

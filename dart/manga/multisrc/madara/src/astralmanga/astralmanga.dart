@@ -9,7 +9,7 @@ Source _astralmangaSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/astralmanga/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/astralmanga/icon.png",
   dateFormat: "dd/mm/yyyy",
   dateFormatLocale: "fr",
 );

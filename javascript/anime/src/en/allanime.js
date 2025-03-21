@@ -3,7 +3,7 @@ const mangayomiSources = [{
     "lang": "en",
     "baseUrl": "https://allanime.to",
     "apiUrl": "https://api.allanime.day/api",
-    "iconUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/icon/en.allanime.png",
+    "iconUrl": "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/javascript/icon/en.allanime.png",
     "typeSource": "single",
     "itemType": 1,
     "isNsfw": false,

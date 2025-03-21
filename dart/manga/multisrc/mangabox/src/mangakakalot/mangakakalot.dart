@@ -8,7 +8,7 @@ Source _mangakakalotSource = Source(
   lang: "en",
   typeSource: "mangabox",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangabox/src/mangakakalot/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangabox/src/mangakakalot/icon.png",
   dateFormat: "MMM dd,yyyy",
   dateFormatLocale: "en",
 );

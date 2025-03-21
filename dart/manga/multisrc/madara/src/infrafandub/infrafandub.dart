@@ -8,7 +8,7 @@ Source _infrafandubSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/infrafandub/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/infrafandub/icon.png",
   dateFormat: "dd/MM/yyyy",
   dateFormatLocale: "es",
 );

@@ -1,5 +1,5 @@
 name: 🐞 Issue report
-description: Report a source issue in Mangayomi
+description: Report a source issue in AnymeX
 labels: [Bug]
 body:
 
@@ -59,9 +59,9 @@ body:
   - type: input
     id: mangayomi-version
     attributes:
-      label: Mangayomi version
+      label: AnymeX version
       description: |
-        You can find your Mangayomi version in **More → About**.
+        You can find your AnymeX version in **More → About**.
       placeholder: |
         Example: "0.0.67"
     validations:
@@ -96,5 +96,5 @@ body:
           required: true
         - label: I have updated all installed extensions.
           required: true
-        - label: If this is an issue with the app itself, I should be opening an issue in the [app repository](https://github.com/kodjodevf/mangayomi/issues/new/choose).
+        - label: If this is an issue with the app itself, I should be opening an issue in the [app repository](https://github.com/MiraiEnoki/mangayomi/issues/new/choose).
           required: true

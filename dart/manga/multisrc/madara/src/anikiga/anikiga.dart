@@ -9,7 +9,7 @@ Source _anikigaSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/anikiga/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/anikiga/icon.png",
   dateFormat: "d MMMMM yyyy",
   dateFormatLocale: "tr",
 );

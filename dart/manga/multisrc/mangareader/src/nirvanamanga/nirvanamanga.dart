@@ -8,7 +8,7 @@ Source _nirvanamangaSource = Source(
   isNsfw: false,
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/nirvanamanga/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/nirvanamanga/icon.png",
   dateFormat: "MMMM dd, yyyy",
   dateFormatLocale: "tr",
 );

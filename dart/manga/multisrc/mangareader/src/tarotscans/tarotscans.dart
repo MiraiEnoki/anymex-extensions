@@ -8,7 +8,7 @@ Source _tarotscansSource = Source(
   lang: "tr",
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/tarotscans/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/tarotscans/icon.png",
   dateFormat: "MMMM dd, yyyy",
   dateFormatLocale: "tr",
 );

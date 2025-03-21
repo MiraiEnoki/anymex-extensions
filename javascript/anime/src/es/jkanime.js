@@ -106,7 +106,7 @@ class DefaultExtension extends MProvider {
 
         // get episodes
         detail.episodes = [];
-        res = await this.client.get(lastEpisodeUrl, {'User-Agent': 'Mangayomi'});
+        res = await this.client.get(lastEpisodeUrl, {'User-Agent': 'AnymeX'});
         const end = parseInt(JSON.parse(res.body)[0].number);
         for (let i = 1; i <= end; i++) {
             detail.episodes.push({
@@ -496,7 +496,7 @@ async function doodExtractor(url) {
 
     response = await new Client().get(`https://${doodhost}/pass_md5/${md5}`, { "Referer": newUrl });
     const videoUrl = `${response.body}${randomString}?token=${token}&expiry=${expiry}`;
-    const headers = { "User-Agent": "Mangayomi", "Referer": doodhost };
+    const headers = { "User-Agent": "AnymeX", "Referer": doodhost };
     return [{ url: videoUrl, originalUrl: videoUrl, headers: headers, quality: '' }];
 }
 
@@ -598,7 +598,7 @@ async function speedfilesExtractor(url) {
 async function luluvdoExtractor(url) {
     const client = new Client();    
     const match = url.match(/(.*?:\/\/.*?)\/.*\/(.*)/);
-    const headers = {'user-agent': 'Mangayomi'};
+    const headers = {'user-agent': 'AnymeX'};
     const res = await client.get(`${match[1]}/dl?op=embed&file_code=${match[2]}`, headers);    
     return await jwplayerExtractor(res.body, headers);
 }

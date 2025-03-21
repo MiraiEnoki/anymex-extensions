@@ -8,7 +8,7 @@ Source _jobsibeSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/jobsibe/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/jobsibe/icon.png",
   dateFormat: "MMMM d, yyyy",
   dateFormatLocale: "es",
 );

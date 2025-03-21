@@ -3,7 +3,7 @@ const mangayomiSources = [{
     "lang": "es",
     "baseUrl": "https://www3.animeflv.net",
     "apiUrl": "",
-    "iconUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/icon/es.animeflv.png",
+    "iconUrl": "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/javascript/icon/es.animeflv.png",
     "typeSource": "single",
     "itemType": 1,
     "isNsfw": false,

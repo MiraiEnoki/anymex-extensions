@@ -9,7 +9,7 @@ Source _mantrazscanSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/mantrazscan/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/mantrazscan/icon.png",
   dateFormat: "dd/MM/yyyy",
   dateFormatLocale: "es",
 );

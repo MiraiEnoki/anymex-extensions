@@ -3,7 +3,7 @@ const mangayomiSources = [{
     "lang": "de",
     "baseUrl": "https://aniworld.to",
     "apiUrl": "",
-    "iconUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/icon/de.aniworld.png",
+    "iconUrl": "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/javascript/icon/de.aniworld.png",
     "typeSource": "single",
     "itemType": 1,
     "isNsfw": false,
@@ -383,7 +383,7 @@ async function doodExtractor(url) {
 
     response = await new Client().get(`https://${doodhost}/pass_md5/${md5}`, { "Referer": newUrl });
     const videoUrl = `${response.body}${randomString}?token=${token}&expiry=${expiry}`;
-    const headers = { "User-Agent": "Mangayomi", "Referer": doodhost };
+    const headers = { "User-Agent": "AnymeX", "Referer": doodhost };
     return [{ url: videoUrl, originalUrl: videoUrl, headers: headers, quality: '' }];
 }
 
@@ -485,7 +485,7 @@ async function speedfilesExtractor(url) {
 async function luluvdoExtractor(url) {
     const client = new Client();
     const match = url.match(/(.*?:\/\/.*?)\/.*\/(.*)/);
-    const headers = { 'user-agent': 'Mangayomi' };
+    const headers = { 'user-agent': 'AnymeX' };
     const res = await client.get(`${match[1]}/dl?op=embed&file_code=${match[2]}`, headers);
     return await jwplayerExtractor(res.body, headers);
 }

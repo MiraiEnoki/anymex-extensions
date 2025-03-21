@@ -8,7 +8,7 @@ Source _skymangasSource = Source(
   isNsfw: false,
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/skymangas/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/skymangas/icon.png",
   dateFormat: "MMMM dd, yyyy",
   dateFormatLocale: "es",
 );

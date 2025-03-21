@@ -8,7 +8,7 @@ Source _tresdaosscanSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/tresdaosscan/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/tresdaosscan/icon.png",
   dateFormat: "MMMM dd, yyyy",
   dateFormatLocale: "es",
 );

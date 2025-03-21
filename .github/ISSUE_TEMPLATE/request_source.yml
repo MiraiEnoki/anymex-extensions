@@ -1,5 +1,5 @@
 name: 🌐 Source request
-description: Suggest a new source for Mangayomi
+description: Suggest a new source for AnymeX
 labels: [Source request]
 body:
 
@@ -47,5 +47,5 @@ body:
           required: true
         - label: I have written a title with source name.
           required: true
-        - label: I have checked that the extension does not already exist by searching the [GitHub repository](https://github.com/kodjodevf/mangayomi-extensions/) and verified it does not appear in the code base.
+        - label: I have checked that the extension does not already exist by searching the [GitHub repository](https://github.com/MiraiEnoki/anymex-extensions/) and verified it does not appear in the code base.
           required: true

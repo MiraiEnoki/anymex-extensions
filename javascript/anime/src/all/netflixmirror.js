@@ -4,7 +4,7 @@ const mangayomiSources = [{
     "lang": "all",
     "baseUrl": "https://iosmirror.cc",
     "apiUrl": "https://pcmirror.cc",
-    "iconUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/icon/all.netflixmirror.png",
+    "iconUrl": "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/javascript/icon/all.netflixmirror.png",
     "typeSource": "single",
     "itemType": 1,
     "version": "0.1.5",

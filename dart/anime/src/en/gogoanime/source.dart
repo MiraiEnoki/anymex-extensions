@@ -3,14 +3,14 @@ import '../../../../../model/source.dart';
 Source get gogoanimeSource => _gogoanimeSource;
 const _gogoanimeVersion = "0.1.15";
 const _gogoanimeSourceCodeUrl =
-    "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/src/en/gogoanime/gogoanime.dart";
+    "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/src/en/gogoanime/gogoanime.dart";
 Source _gogoanimeSource = Source(
   name: "Gogoanime",
   baseUrl: "https://anitaku.to",
   lang: "en",
   typeSource: "single",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/src/en/gogoanime/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/src/en/gogoanime/icon.png",
   sourceCodeUrl: _gogoanimeSourceCodeUrl,
   version: _gogoanimeVersion,
   itemType: ItemType.anime,

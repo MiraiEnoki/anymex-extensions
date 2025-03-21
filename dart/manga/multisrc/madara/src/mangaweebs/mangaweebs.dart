@@ -9,7 +9,7 @@ Source _mangaweebsSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/mangaweebs/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/mangaweebs/icon.png",
   dateFormat: "dd MMMM HH:mm",
   dateFormatLocale: "en_us",
 );

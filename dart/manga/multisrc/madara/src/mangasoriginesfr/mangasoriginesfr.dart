@@ -8,7 +8,7 @@ Source _mangasoriginesfrSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/mangasoriginesfr/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/mangasoriginesfr/icon.png",
   dateFormat: "dd/mm/yyyy",
   dateFormatLocale: "fr",
 );

@@ -8,7 +8,7 @@ Source _tukangkomikSource = Source(
   lang: "id",
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/tukangkomik/icon.png",
+      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/tukangkomik/icon.png",
   dateFormat: "MMM d, yyyy",
   dateFormatLocale: "tr",
 );

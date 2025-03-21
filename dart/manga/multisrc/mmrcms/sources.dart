@@ -10,7 +10,7 @@ import 'src/mangafr/mangafr.dart';
 
 const mmrcmsVersion = "0.0.65";
 const mmrcmsSourceCodeUrl =
-    "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mmrcms/mmrcms.dart";
+    "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mmrcms/mmrcms.dart";
 
 List<Source> get mmrcmsSourcesList => _mmrcmsSourcesList;
 List<Source> _mmrcmsSourcesList =
