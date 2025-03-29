@@ -8,7 +8,7 @@ Source _comicasoSource = Source(
   isNsfw: false,
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/comicaso/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/comicaso/icon.png",
   dateFormat: "MMMM d, yyyy",
   dateFormatLocale: "id",
 );

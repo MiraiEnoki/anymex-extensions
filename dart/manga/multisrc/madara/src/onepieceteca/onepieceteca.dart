@@ -8,7 +8,7 @@ Source _onepiecetecaSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/onepieceteca/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/onepieceteca/icon.png",
   dateFormat: "MMMM dd, yyyy",
   dateFormatLocale: "pt-br",
 );

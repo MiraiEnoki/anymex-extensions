@@ -8,7 +8,7 @@ Source _mangahonaSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/mangahona/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/mangahona/icon.png",
   dateFormat: "yyyy-MM-dd",
   dateFormatLocale: "en",
 );

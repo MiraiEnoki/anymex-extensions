@@ -9,5 +9,5 @@ Source _wiflixSource = Source(
   typeSource: "datalifeengine",
   itemType: ItemType.anime,
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/multisrc/datalifeengine/src/wiflix/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/multisrc/datalifeengine/src/wiflix/icon.png",
 );

@@ -4,7 +4,7 @@ import 'src/sflix/sflix.dart';
 
 const _dopeflixVersion = "0.0.55";
 const _dopeflixSourceCodeUrl =
-    "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/multisrc/dopeflix/dopeflix.dart";
+    "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/multisrc/dopeflix/dopeflix.dart";
 
 List<Source> get dopeflixSourcesList => _dopeflixSourcesList;
 List<Source> _dopeflixSourcesList =

@@ -9,7 +9,7 @@ Source _mangareadorgSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/mangareadorg/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/mangareadorg/icon.png",
   dateFormat: "dd.MM.yyy",
   dateFormatLocale: "en_us",
 );

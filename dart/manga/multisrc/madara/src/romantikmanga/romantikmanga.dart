@@ -9,7 +9,7 @@ Source _romantikmangaSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/romantikmanga/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/romantikmanga/icon.png",
   dateFormat: "MMM d, yyy",
   dateFormatLocale: "tr",
 );

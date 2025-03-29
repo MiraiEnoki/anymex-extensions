@@ -8,7 +8,7 @@ Source _stellarsaberSource = Source(
   isNsfw: false,
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/stellarsaber/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/stellarsaber/icon.png",
   dateFormat: "MMMMM dd, yyyy",
   dateFormatLocale: "ar",
 );

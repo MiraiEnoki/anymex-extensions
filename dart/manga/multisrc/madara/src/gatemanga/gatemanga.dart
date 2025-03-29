@@ -8,7 +8,7 @@ Source _gatemangaSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/gatemanga/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/gatemanga/icon.png",
   dateFormat: "d MMMM، yyyy",
   dateFormatLocale: "ar",
 );

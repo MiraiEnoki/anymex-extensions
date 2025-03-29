@@ -9,7 +9,7 @@ Source _thebeginningaftertheendSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/thebeginningaftertheend/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/thebeginningaftertheend/icon.png",
   dateFormat: "MMMMM dd, yyyy",
   dateFormatLocale: "fr",
 );

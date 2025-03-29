@@ -9,7 +9,7 @@ Source _monarcamangaSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/monarcamanga/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/monarcamanga/icon.png",
   dateFormat: "MMM d, yyy",
   dateFormatLocale: "es",
 );

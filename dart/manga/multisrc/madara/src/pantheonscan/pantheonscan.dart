@@ -9,7 +9,7 @@ Source _pantheonscanSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/pantheonscan/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/pantheonscan/icon.png",
   dateFormat: "d MMMM yyyy",
   dateFormatLocale: "fr",
 );

@@ -8,7 +8,7 @@ Source _afroditscansSource = Source(
   isNsfw: false,
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/afroditscans/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/afroditscans/icon.png",
   dateFormat: "MMMM d, yyy",
   dateFormatLocale: "tr",
 );

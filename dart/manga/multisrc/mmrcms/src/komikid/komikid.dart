@@ -9,7 +9,7 @@ Source _komikidSource = Source(
 
   typeSource: "mmrcms",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mmrcms/src/komikid/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mmrcms/src/komikid/icon.png",
   dateFormat: "d MMM. yyyy",
   dateFormatLocale: "en_us",
 );

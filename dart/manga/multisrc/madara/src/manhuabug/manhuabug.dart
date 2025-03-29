@@ -8,7 +8,7 @@ Source _manhuabugSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/manhuabug/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/manhuabug/icon.png",
   dateFormat: "d MMMM yyyy",
   dateFormatLocale: "en",
 );

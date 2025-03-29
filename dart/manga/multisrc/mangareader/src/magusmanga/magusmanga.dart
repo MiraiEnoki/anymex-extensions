@@ -8,7 +8,7 @@ Source _magusmangaSource = Source(
   lang: "ar",
   typeSource: "mangareader",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/mangareader/src/magusmanga/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/mangareader/src/magusmanga/icon.png",
   dateFormat: "MMMMM d, yyyy",
   dateFormatLocale: "ar",
 );

@@ -9,7 +9,7 @@ Source _shibamangaSource = Source(
 
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/madara/src/shibamanga/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/madara/src/shibamanga/icon.png",
   dateFormat: "MM/dd/yyyy",
   dateFormatLocale: "en_us",
 );

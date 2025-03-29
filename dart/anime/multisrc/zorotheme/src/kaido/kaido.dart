@@ -9,5 +9,5 @@ Source _kaidoSource = Source(
   itemType: ItemType.anime,
   typeSource: "zorotheme",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/multisrc/zorotheme/src/kaido/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/multisrc/zorotheme/src/kaido/icon.png",
 );

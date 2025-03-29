@@ -8,7 +8,7 @@ Source _siimangaSource = Source(
   isNsfw: false,
   typeSource: "madara",
   iconUrl:
-      "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/dart/manga/multisrc/madara/src/siimanga/icon.png",
+      "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/dart/manga/multisrc/madara/src/siimanga/icon.png",
   dateFormat: "d MMMM",
   dateFormatLocale: "en",
 );

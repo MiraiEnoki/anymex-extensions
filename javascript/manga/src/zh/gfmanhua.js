@@ -3,7 +3,7 @@ const mangayomiSources = [{
     "lang": "zh",
     "baseUrl": "https://www.gufengmh.com",
     "apiUrl": "",
-    "iconUrl": "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/main/javascript/icon/zh.gfmanhua.png",
+    "iconUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/icon/zh.gfmanhua.png",
     "typeSource": "single",
     "itemType": 0,
     "version": "0.0.1",

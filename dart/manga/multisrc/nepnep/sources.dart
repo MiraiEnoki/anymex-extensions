@@ -5,7 +5,7 @@ import 'src/mangalife/mangalife.dart';
 
 const nepnepVersion = "0.0.65";
 const nepnepSourceCodeUrl =
-    "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/manga/multisrc/nepnep/nepnep.dart";
+    "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/manga/multisrc/nepnep/nepnep.dart";
 
 List<Source> get nepnepSourcesList => _nepnepSourcesList;
 List<Source> _nepnepSourcesList =
