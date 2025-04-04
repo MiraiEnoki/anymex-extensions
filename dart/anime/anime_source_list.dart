@@ -8,8 +8,9 @@ import 'src/ar/okanime/source.dart';
 import 'src/de/animetoast/source.dart';
 import 'src/en/animepahe/source.dart';
 import 'src/en/gogoanime/source.dart';
-import 'src/en/nineanimetv/source.dart';
+import 'src/en/kisskh/source.dart';
 import 'src/en/vumeto/source.dart';
+import 'src/en/nineanimetv/source.dart';
 import 'src/es/animeonlineninja/source.dart';
 import 'src/fr/animesama/source.dart';
 import 'src/fr/anizone/source.dart';
@@ -52,5 +53,6 @@ List<Source> dartAnimesourceList = [
   diziwatchSource,
   aniZoneSource,
   animeonlineninjaSource,
+  kisskhSource,
   vumetoSource,
 ];
