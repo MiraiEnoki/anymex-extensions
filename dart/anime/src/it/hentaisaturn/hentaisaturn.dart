@@ -57,7 +57,7 @@ class HentaiSaturn extends MProvider {
 
     final images = xpath(
       res,
-      '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-anime"]/@src',
+      '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-hentai"]/@src',
     );
 
     for (var i = 0; i < names.length; i++) {
@@ -126,12 +126,12 @@ class HentaiSaturn extends MProvider {
     if (query.isNotEmpty) {
       urls = xpath(
         res,
-        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio badge-light"]/@href',
+        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio text-left badge-yellow"]/@href',
       );
 
       names = xpath(
         res,
-        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio badge-light"]/text()',
+        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio text-left badge-yellow"]/text()',
       );
 
       images = xpath(
@@ -145,7 +145,7 @@ class HentaiSaturn extends MProvider {
 
       images = xpath(
         res,
-        '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-anime"]/@src',
+        '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-hentai"]/@src',
       );
     }
 
@@ -171,9 +171,10 @@ class HentaiSaturn extends MProvider {
       res,
       '//div[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100 text-white"]/text()',
     );
+    
     if (detailsList.isNotEmpty) {
-      final details = detailsList.first;
-
+      final details = detailsList[1];  // 0 (or ".first") would mean to take the genres list array.
+      
       anime.status = parseStatus(
         details.substring(
           details.indexOf("Stato:") + 6,
@@ -186,6 +187,7 @@ class HentaiSaturn extends MProvider {
 
     final description = xpath(res, '//*[@id="shown-trama"]/text()');
     final descriptionFull = xpath(res, '//*[@id="full-trama"]/text()');
+    
     if (description.isNotEmpty) {
       anime.description = description.first;
     } else {
@@ -199,7 +201,7 @@ class HentaiSaturn extends MProvider {
 
     anime.genre = xpath(
       res,
-      '//*[@class="container p-0 mt-3 mb-3 rounded text-white"]/a/text()',
+      '//*[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100 text-white"]/a[@class="badge badge-light generi-as mb-1"]/text()',
     );
 
     final epUrls = xpath(
@@ -345,7 +347,7 @@ class HentaiSaturn extends MProvider {
         CheckBoxFilter("Watersports", "Watersports"),
         CheckBoxFilter("X-Ray", "X-Ray"),
         CheckBoxFilter("Yaoi", "Yaoi"),
-        CheckBoxFilter("Yuri", "Yuri"),
+        CheckBoxFilter("Yuri", "Yuri")
       ]),
       GroupFilter("YearList", "Anno di Uscita", [
         for (var i = 1969; i < 2025; i++)
