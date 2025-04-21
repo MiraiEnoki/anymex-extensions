@@ -10,7 +10,7 @@ Source _hentaisaturn = Source(
   lang: "it",
   typeSource: "single",
   iconUrl:
-      "https://www.hentaisaturn.tv/immagini/Saturno.svg",
+      "https://raw.githubusercontent.com/xShader1374/mangayomi-extensions/$branchName/dart/anime/src/it/hentaisaturn/HentaiSaturnLogo.png",
   sourceCodeUrl: _hentaisaturnCodeUrl,
   version: _hentaisaturnVersion,
   itemType: ItemType.anime,
