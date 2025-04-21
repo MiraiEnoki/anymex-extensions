@@ -29,7 +29,7 @@ class HentaiSaturn extends MProvider {
 
     final images = xpath(
       res,
-      '//*[@class="sebox"]/div[@class="msebox"]/div[@class="bigsebox"]/div/img[@class="attachment-post-thumbnail size-post-thumbnail wp-post-image"]/@src',
+      '//*[@class="sebox"]/div[@class="msebox"]/div[@class="bigsebox"]/div/a/img[@class="image-animation"]/@src',
     );
 
     for (var i = 0; i < names.length; i++) {
@@ -169,7 +169,7 @@ class HentaiSaturn extends MProvider {
     MManga anime = MManga();
     final detailsList = xpath(
       res,
-      '//div[@class="container p-0 mt-3 mb-3 rounded text-white"]/text()',
+      '//div[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100 text-white"]/text()',
     );
     if (detailsList.isNotEmpty) {
       final details = detailsList.first;
@@ -199,7 +199,7 @@ class HentaiSaturn extends MProvider {
 
     anime.genre = xpath(
       res,
-      '//*[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100"]/a/text()',
+      '//*[@class="container p-0 mt-3 mb-3 rounded text-white"]/a/text()',
     );
 
     final epUrls = xpath(
