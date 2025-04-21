@@ -330,7 +330,7 @@ class AnimeSaturn extends MProvider {
         CheckBoxFilter("Yuri", "Yuri"),
       ]),
       GroupFilter("YearList", "Anno di Uscita", [
-        for (var i = 1969; i < 2022; i++)
+        for (var i = 1969; i < 2025; i++)
           CheckBoxFilter(i.toString(), i.toString()),
       ]),
       GroupFilter("StateList", "Stato", [
