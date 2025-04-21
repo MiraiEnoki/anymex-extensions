@@ -1,16 +1,16 @@
 const mangayomiSources = [{
-    "name": "AnimeWorld",
+    "name": "HentaiWorld",
     "lang": "it",
-    "baseUrl": "https://www.animeworld.ac",
+    "baseUrl": "https://www.hentaiworld.me",
     "apiUrl": "",
-    "iconUrl": "https://i.postimg.cc/RFRGfBvP/FVLyB1I.png",
+    "iconUrl": "https://www.hentaiworld.me/assets/images/favicon/favicon-32x32.png",
     "typeSource": "single",
     "isManga": false,
     "itemType": 1,
-    "version": "0.0.12",
+    "version": "0.0.1",
     "dateFormat": "",
     "dateFormatLocale": "",
-    "pkgPath": "anime/src/it/animeworld.js"
+    "pkgPath": "anime/src/it/hentaiworld.js"
 }];
 
 class DefaultExtension extends MProvider {

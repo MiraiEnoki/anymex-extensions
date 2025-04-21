@@ -1,15 +1,15 @@
 const mangayomiSources = [{
     "name": "MangaWorld",
     "lang": "it",
-    "baseUrl": "https://www.mangaworld.nz",
+    "baseUrl": "https://www.mangaworldadult.net",
     "apiUrl": "",
-    "iconUrl": "https://www.mangaworld.nz/public/assets/images/MangaWorldSquareLogo.png",
+    "iconUrl": "https://www.mangaworldadult.net/public/assets/images/MangaWorldAdultSquareLogo.png",
     "typeSource": "single",
     "isManga": true,
     "version": "0.0.1",
     "dateFormat": "",
     "dateFormatLocale": "",
-    "pkgPath": "manga/src/it/mangaworld.js"
+    "pkgPath": "manga/src/it/mangaworldadult.js"
 }];
 
 class DefaultExtension extends MProvider {
@@ -148,7 +148,6 @@ class DefaultExtension extends MProvider {
                 type_name: "GroupFilter",
                 name: "Generi",
                 state: [
-                    ['Adulti', 'adulti'],
                     ['Arti Marziali', 'arti-marziali'],
                     ['Avventura', 'avventura'],
                     ['Azione', 'azione'],
@@ -279,3 +278,4 @@ class DefaultExtension extends MProvider {
         throw new Error("getSourcePreferences not implemented");
     }
 }
+

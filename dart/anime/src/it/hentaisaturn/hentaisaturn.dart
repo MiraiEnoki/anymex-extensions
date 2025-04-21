@@ -1,8 +1,8 @@
 import 'package:mangayomi/bridge_lib.dart';
 import 'dart:convert';
 
-class AnimeSaturn extends MProvider {
-  AnimeSaturn({required this.source});
+class HentaiSaturn extends MProvider {
+  HentaiSaturn({required this.source});
 
   MSource source;
 
@@ -12,7 +12,7 @@ class AnimeSaturn extends MProvider {
   Future<MPages> getPopular(int page) async {
     final res =
         (await client.get(
-          Uri.parse("${source.baseUrl}/animeincorso?page=$page"),
+          Uri.parse("${source.baseUrl}/ongoing?page=$page"),
         )).body;
 
     List<MManga> animeList = [];
@@ -29,7 +29,7 @@ class AnimeSaturn extends MProvider {
 
     final images = xpath(
       res,
-      '//*[@class="sebox"]/div[@class="msebox"]/div[@class="bigsebox"]/div/img[@class="attachment-post-thumbnail size-post-thumbnail wp-post-image"]/@src',
+      '//*[@class="sebox"]/div[@class="msebox"]/div[@class="bigsebox"]/div/a/img[@class="image-animation"]/@src',
     );
 
     for (var i = 0; i < names.length; i++) {
@@ -57,7 +57,7 @@ class AnimeSaturn extends MProvider {
 
     final images = xpath(
       res,
-      '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-anime"]/@src',
+      '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-hentai"]/@src',
     );
 
     for (var i = 0; i < names.length; i++) {
@@ -76,7 +76,7 @@ class AnimeSaturn extends MProvider {
     String url = "";
 
     if (query.isNotEmpty) {
-      url = "${source.baseUrl}/animelist?search=$query";
+      url = "${source.baseUrl}/hentailist?search=$query";
     } else {
       url = "${source.baseUrl}/filter?";
       int variantgenre = 0;
@@ -126,12 +126,12 @@ class AnimeSaturn extends MProvider {
     if (query.isNotEmpty) {
       urls = xpath(
         res,
-        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio badge-light"]/@href',
+        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio text-left badge-yellow"]/@href',
       );
 
       names = xpath(
         res,
-        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio badge-light"]/text()',
+        '//*[@class="list-group"]/li[@class="list-group-item bg-dark-as-box-shadow"]/div[@class="item-archivio"]/div[@class="info-archivio"]/h3/a[@class="badge badge-archivio text-left badge-yellow"]/text()',
       );
 
       images = xpath(
@@ -145,7 +145,7 @@ class AnimeSaturn extends MProvider {
 
       images = xpath(
         res,
-        '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-anime"]/@src',
+        '//*[@class="card mb-4 shadow-sm"]/a/img[@class="new-hentai"]/@src',
       );
     }
 
@@ -171,9 +171,10 @@ class AnimeSaturn extends MProvider {
       res,
       '//div[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100 text-white"]/text()',
     );
+    
     if (detailsList.isNotEmpty) {
-      final details = detailsList.first;
-
+      final details = detailsList[1];  // 0 (or ".first") would mean to take the genres list array.
+      
       anime.status = parseStatus(
         details.substring(
           details.indexOf("Stato:") + 6,
@@ -186,6 +187,7 @@ class AnimeSaturn extends MProvider {
 
     final description = xpath(res, '//*[@id="shown-trama"]/text()');
     final descriptionFull = xpath(res, '//*[@id="full-trama"]/text()');
+    
     if (description.isNotEmpty) {
       anime.description = description.first;
     } else {
@@ -199,7 +201,7 @@ class AnimeSaturn extends MProvider {
 
     anime.genre = xpath(
       res,
-      '//*[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100"]/a/text()',
+      '//*[@class="container shadow rounded bg-dark-as-box mb-3 p-3 w-100 text-white"]/a[@class="badge badge-light generi-as mb-1"]/text()',
     );
 
     final epUrls = xpath(
@@ -284,50 +286,68 @@ class AnimeSaturn extends MProvider {
     return [
       HeaderFilter("Ricerca per titolo ignora i filtri e viceversa"),
       GroupFilter("GenreFilter", "Generi", [
-        CheckBoxFilter("Arti Marziali", "Arti Marziali"),
-        CheckBoxFilter("Avventura", "Avventura"),
-        CheckBoxFilter("Azione", "Azione"),
-        CheckBoxFilter("Bambini", "Bambini"),
-        CheckBoxFilter("Commedia", "Commedia"),
-        CheckBoxFilter("Demenziale", "Demenziale"),
-        CheckBoxFilter("Demoni", "Demoni"),
-        CheckBoxFilter("Drammatico", "Drammatico"),
-        CheckBoxFilter("Ecchi", "Ecchi"),
+        CheckBoxFilter("3D", "3D"),
+        CheckBoxFilter("Ahegao", "Ahegao"),
+        CheckBoxFilter("Anal", "Anal"),
+        CheckBoxFilter("BDSM", "BDSM"),
+        CheckBoxFilter("Big Boobs", "Big Boobs"),
+        CheckBoxFilter("Blow Job", "Blow Job"),
+        CheckBoxFilter("Bondage", "Bondage"),
+        CheckBoxFilter("Boob Job", "Boob Job"),
+        CheckBoxFilter("Censored", "Censored"),
+        CheckBoxFilter("Comedy", "Comedy"),
+        CheckBoxFilter("Cosplay", "Cosplay"),
+        CheckBoxFilter("Creampie", "Creampie"),
+        CheckBoxFilter("Dark Skin", "Dark Skin"),
+        CheckBoxFilter("Facial", "Facial"),
         CheckBoxFilter("Fantasy", "Fantasy"),
-        CheckBoxFilter("Gioco", "Gioco"),
+        CheckBoxFilter("Filmed", "Filmed"),
+        CheckBoxFilter("Foot Job", "Foot Job"),
+        CheckBoxFilter("Futanari", "Futanari"),
+        CheckBoxFilter("Gangbang", "Gangbang"),
+        CheckBoxFilter("Glasses", "Glasses"),
+        CheckBoxFilter("Hand Job", "Hand Job"),
         CheckBoxFilter("Harem", "Harem"),
-        CheckBoxFilter("Hentai", "Hentai"),
-        CheckBoxFilter("Horror", "Horror"),
-        CheckBoxFilter("Josei", "Josei"),
-        CheckBoxFilter("Magia", "Magia"),
-        CheckBoxFilter("Mecha", "Mecha"),
-        CheckBoxFilter("Militari", "Militari"),
-        CheckBoxFilter("Mistero", "Mistero"),
-        CheckBoxFilter("Musicale", "Musicale"),
-        CheckBoxFilter("Parodia", "Parodia"),
-        CheckBoxFilter("Polizia", "Polizia"),
-        CheckBoxFilter("Psicologico", "Psicologico"),
-        CheckBoxFilter("Romantico", "Romantico"),
-        CheckBoxFilter("Samurai", "Samurai"),
-        CheckBoxFilter("Sci-Fi", "Sci-Fi"),
-        CheckBoxFilter("Scolastico", "Scolastico"),
-        CheckBoxFilter("Seinen", "Seinen"),
-        CheckBoxFilter("Sentimentale", "Sentimentale"),
-        CheckBoxFilter("Shoujo Ai", "Shoujo Ai"),
-        CheckBoxFilter("Shoujo", "Shoujo"),
-        CheckBoxFilter("Shounen Ai", "Shounen Ai"),
-        CheckBoxFilter("Shounen", "Shounen"),
-        CheckBoxFilter("Slice of Life", "Slice of Life"),
-        CheckBoxFilter("Soprannaturale", "Soprannaturale"),
-        CheckBoxFilter("Spazio", "Spazio"),
-        CheckBoxFilter("Sport", "Sport"),
-        CheckBoxFilter("Storico", "Storico"),
-        CheckBoxFilter("Superpoteri", "Superpoteri"),
-        CheckBoxFilter("Thriller", "Thriller"),
-        CheckBoxFilter("Vampiri", "Vampiri"),
-        CheckBoxFilter("Veicoli", "Veicoli"),
+        CheckBoxFilter("HD", "HD"),
+        CheckBoxFilter("Incest", "Incest"),
+        CheckBoxFilter("Inflation", "Inflation"),
+        CheckBoxFilter("Lactation", "Lactation"),
+        CheckBoxFilter("Loli", "Loli"),
+        CheckBoxFilter("Maid", "Maid"),
+        CheckBoxFilter("Masturbation", "Masturbation"),
+        CheckBoxFilter("Milf", "Milf"),
+        CheckBoxFilter("Mind Break", "Mind Break"),
+        CheckBoxFilter("Mind Control", "Mind Control"),
+        CheckBoxFilter("Monster", "Monster"),
+        CheckBoxFilter("NTR", "NTR"),
+        CheckBoxFilter("Nurse", "Nurse"),
+        CheckBoxFilter("Orgy", "Orgy"),
+        CheckBoxFilter("Plot", "Plot"),
+        CheckBoxFilter("POV", "POV"),
+        CheckBoxFilter("Pregnant", "Pregnant"),
+        CheckBoxFilter("Public Sex", "Public Sex"),
+        CheckBoxFilter("Rape", "Rape"),
+        CheckBoxFilter("Reverse Rape", "Reverse Rape"),
+        CheckBoxFilter("Rimjob", "Rimjob"),
+        CheckBoxFilter("Scat", "Scat"),
+        CheckBoxFilter("School Girl", "School Girl"),
+        CheckBoxFilter("Shota", "Shota"),
+        CheckBoxFilter("Softcore", "Softcore"),
+        CheckBoxFilter("Swimsuit", "Swimsuit"),
+        CheckBoxFilter("Teacher", "Teacher"),
+        CheckBoxFilter("Tentacle", "Tentacle"),
+        CheckBoxFilter("Threesome", "Threesome"),
+        CheckBoxFilter("Toys", "Toys"),
+        CheckBoxFilter("Trap", "Trap"),
+        CheckBoxFilter("Tsundere", "Tsundere"),
+        CheckBoxFilter("Ugly Bastard", "Ugly Bastard"),
+        CheckBoxFilter("Uncensored", "Uncensored"),
+        CheckBoxFilter("Vanilla", "Vanilla"),
+        CheckBoxFilter("Virgin", "Virgin"),
+        CheckBoxFilter("Watersports", "Watersports"),
+        CheckBoxFilter("X-Ray", "X-Ray"),
         CheckBoxFilter("Yaoi", "Yaoi"),
-        CheckBoxFilter("Yuri", "Yuri"),
+        CheckBoxFilter("Yuri", "Yuri")
       ]),
       GroupFilter("YearList", "Anno di Uscita", [
         for (var i = 1969; i < 2025; i++)
@@ -389,6 +409,6 @@ class AnimeSaturn extends MProvider {
   }
 }
 
-AnimeSaturn main(MSource source) {
-  return AnimeSaturn(source: source);
+HentaiSaturn main(MSource source) {
+  return HentaiSaturn(source: source);
 }
