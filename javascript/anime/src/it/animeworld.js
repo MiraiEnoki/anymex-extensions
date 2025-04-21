@@ -1,7 +1,7 @@
 const mangayomiSources = [{
     "name": "AnimeWorld",
     "lang": "it",
-    "baseUrl": "https://www.animeworld.so",
+    "baseUrl": "https://www.animeworld.ac",
     "apiUrl": "",
     "iconUrl": "https://i.postimg.cc/RFRGfBvP/FVLyB1I.png",
     "typeSource": "single",
