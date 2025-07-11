@@ -1,6 +1,5 @@
 import 'package:mangayomi/bridge_lib.dart';
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 
 class WatchAnimeWorldClient extends MProvider {
   WatchAnimeWorldClient({required this.source});
@@ -170,6 +169,7 @@ class WatchAnimeWorldClient extends MProvider {
       // Fallback: If no results, try direct /series/ and /category/franchise/ URLs
       if (mangaList.isEmpty && page == 1) {
         final fallbackSlugs = [query.toLowerCase().replaceAll(" ", "-"), query.toLowerCase().replaceAll(" ", "")];
+        bool found = false;
         for (final slug in fallbackSlugs) {
           final directUrls = [
             "$baseUrl/series/$slug/",
@@ -177,7 +177,7 @@ class WatchAnimeWorldClient extends MProvider {
           ];
           for (final url in directUrls) {
             try {
-              final detailRes = await _safeGet(url);
+              final detailRes = await _safeGet(url).timeout(Duration(seconds: 8));
               if (detailRes.statusCode == 200) {
                 // Try to extract title and image
                 String title = slug;
@@ -198,11 +198,16 @@ class WatchAnimeWorldClient extends MProvider {
                   link: url,
                   imageUrl: imageUrl,
                 ));
+                found = true;
                 break;
               }
             } catch (_) {}
           }
+          if (found) break;
         }
+      }
+      if (mangaList.isEmpty) {
+        return MPages([], false);
       }
       return MPages(mangaList, mangaList.isNotEmpty);
     } catch (e) {
@@ -745,7 +750,7 @@ class WatchAnimeWorldClient extends MProvider {
           print('POSTing to player URL: $playerUrl');
           print('Using cookie: $fireplayerCookie');
           
-          http.Response playerRes;
+          Response playerRes;
           
           // Try with cookie first
           if (fireplayerCookie != null) {
@@ -762,8 +767,8 @@ class WatchAnimeWorldClient extends MProvider {
               },
             );
             
-            print('Player response status (with cookie): ${playerRes.statusCode}');
-            print('Player response body starts with: ${playerRes.body.startsWith('{') ? 'JSON' : 'HTML'}');
+            print('Player response status (with cookie): [32m${playerRes.statusCode}[0m');
+            print('Player response body starts with: [32m${playerRes.body.startsWith('{') ? 'JSON' : 'HTML'}[0m');
             
             // If we got HTML instead of JSON, try without cookie
             if (!playerRes.body.startsWith('{')) {
@@ -779,7 +784,7 @@ class WatchAnimeWorldClient extends MProvider {
                   'Referer': iframeUrl,
                 },
               );
-              print('Player response status (without cookie): ${playerRes.statusCode}');
+              print('Player response status (without cookie): [32m${playerRes.statusCode}[0m');
             }
           } else {
             // No cookie available, try without it
@@ -794,7 +799,7 @@ class WatchAnimeWorldClient extends MProvider {
                 'Referer': iframeUrl,
               },
             );
-            print('Player response status (no cookie): ${playerRes.statusCode}');
+            print('Player response status (no cookie): [32m${playerRes.statusCode}[0m');
           }
 
           // --- ADDED DEBUG PRINTS ---

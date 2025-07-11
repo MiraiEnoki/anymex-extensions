@@ -1,7 +1,7 @@
 import '../../../../../model/source.dart';
 
-const _animeworldindiaVersion = "0.0.36";
-const _animeworldindiaSourceCodeUrl =
+const _watchanimeworldVersion = "0.0.50";
+const _watchanimeworldSourceCodeUrl =
     "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/src/all/animeworldindia/animeworldindia.dart";
 
 String _iconUrl =
@@ -24,14 +24,14 @@ List<Source> _animeworldindiaSourcesList =
     _languages
         .map(
           (e) => Source(
-            name: 'AnimeWorld India',
-            baseUrl: "https://anime-world.in",
+            name: 'Watchanimeworld',
+            baseUrl: "https://watchanimeworld.in",
             lang: e,
             typeSource: "multiple",
             iconUrl: _iconUrl,
-            version: _animeworldindiaVersion,
+            version: _watchanimeworldVersion,
             itemType: ItemType.anime,
-            sourceCodeUrl: _animeworldindiaSourceCodeUrl,
+            sourceCodeUrl: _watchanimeworldSourceCodeUrl,
           ),
         )
         .toList();
