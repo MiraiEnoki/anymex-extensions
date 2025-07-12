@@ -10,7 +10,9 @@ class AnimePahe extends MProvider {
   final Client client = Client();
 
   @override
-  String get baseUrl => getPreferenceValue(source.id, "preferred_domain");
+  String get baseUrl =>
+      "https://animepaheproxy.phisheranimepahe.workers.dev/?url=" +
+      getPreferenceValue(source.id, "preferred_domain");
 
   @override
   Map<String, String> get headers => {'cookie': '__ddg1_=;__ddg2_=;'};
@@ -25,7 +27,8 @@ class AnimePahe extends MProvider {
     final res = (await client.get(
       Uri.parse("$baseUrl/api?m=airing&page=$page"),
       headers: headers,
-    )).body;
+    ))
+        .body;
     final jsonResult = json.decode(res);
     final hasNextPage = jsonResult["current_page"] < jsonResult["last_page"];
     List<MManga> animeList = [];
@@ -45,7 +48,8 @@ class AnimePahe extends MProvider {
     final res = (await client.get(
       Uri.parse("$baseUrl/api?m=search&l=8&q=$query"),
       headers: headers,
-    )).body;
+    ))
+        .body;
     final jsonResult = json.decode(res);
     List<MManga> animeList = [];
     for (var item in jsonResult["data"]) {
@@ -70,7 +74,8 @@ class AnimePahe extends MProvider {
     final res = (await client.get(
       Uri.parse("$baseUrl/anime/$session?anime_id=$id"),
       headers: headers,
-    )).body;
+    ))
+        .body;
     final document = parseHtml(res);
     final status =
         (document.xpathFirst('//div/p[contains(text(),"Status:")]/text()') ??
@@ -132,7 +137,8 @@ class AnimePahe extends MProvider {
       final newRes = (await client.get(
         Uri.parse(newUrl),
         headers: headers,
-      )).body;
+      ))
+          .body;
       animeList.addAll(await recursivePages(newUrl, newRes, session));
     }
     return animeList;
@@ -156,7 +162,8 @@ class AnimePahe extends MProvider {
       final res = (await client.get(
         Uri.parse("$baseUrl/api?m=search&q=$title"),
         headers: headers,
-      )).body;
+      ))
+          .body;
       return substringBefore(
         substringAfter(
           substringAfter(res, "\"id\":$animeId"),
@@ -195,7 +202,8 @@ class AnimePahe extends MProvider {
         );
         final kwikHeaders = (await noRedirectClient.get(
           Uri.parse("${paheWinLink}/i"),
-        )).headers;
+        ))
+            .headers;
         final kwikUrl =
             "https://${substringAfterLast(getMapValue(json.encode(kwikHeaders), "location"), "https://")}";
         final reskwik = (await client.get(
@@ -224,25 +232,24 @@ class AnimePahe extends MProvider {
           );
           cookie +=
               "; ${getMapValue(json.encode(reskwik.headers), "set-cookie").replaceAll("path=/;", "")}";
-          final resNo =
-              await Client(
-                source,
-                json.encode({
-                  "followRedirects": false,
-                  "useDartHttpClient": true,
-                }),
-              ).post(
-                Uri.parse(url),
-                headers: {
-                  "referer": reskwik.request.url.toString(),
-                  "cookie": cookie,
-                  "user-agent": getMapValue(
-                    json.encode(res.request.headers),
-                    "user-agent",
-                  ),
-                },
-                body: {"_token": tok},
-              );
+          final resNo = await Client(
+            source,
+            json.encode({
+              "followRedirects": false,
+              "useDartHttpClient": true,
+            }),
+          ).post(
+            Uri.parse(url),
+            headers: {
+              "referer": reskwik.request.url.toString(),
+              "cookie": cookie,
+              "user-agent": getMapValue(
+                json.encode(res.request.headers),
+                "user-agent",
+              ),
+            },
+            body: {"_token": tok},
+          );
           code = resNo.statusCode;
           tries++;
           location = getMapValue(json.encode(resNo.headers), "location");
@@ -294,8 +301,7 @@ class AnimePahe extends MProvider {
     final n = cm.substring(0, b);
     double mx = 0;
     for (var index = 0; index < ctn.length; index++) {
-      mx +=
-          (int.tryParse(ctn[ctn.length - index - 1], radix: 10) ?? 0.0)
+      mx += (int.tryParse(ctn[ctn.length - index - 1], radix: 10) ?? 0.0)
               .toInt() *
           (pow(sep, index));
     }
@@ -397,7 +403,6 @@ class AnimePahe extends MProvider {
         entries: ["1080p", "720p", "360p"],
         entryValues: ["1080", "720", "360"],
       ),
-
       ListPreference(
         key: "preferred_audio", // Add new preference for audio
         title: "Preferred Audio",

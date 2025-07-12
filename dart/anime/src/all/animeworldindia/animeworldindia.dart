@@ -1,6 +1,5 @@
 import 'package:mangayomi/bridge_lib.dart';
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 
 class WatchAnimeWorldClient extends MProvider {
   WatchAnimeWorldClient({required this.source});
@@ -23,7 +22,7 @@ class WatchAnimeWorldClient extends MProvider {
   String get id => "watchanimeworld";
 
   @override
-  String get version => "8.0.6"; // Updated version with better season support
+  String get version => "8.0.7"; // Updated version with better season support
 
   String _buildUrl(String path) {
     if (path.startsWith("http")) return path;
@@ -745,7 +744,7 @@ class WatchAnimeWorldClient extends MProvider {
           print('POSTing to player URL: $playerUrl');
           print('Using cookie: $fireplayerCookie');
           
-          http.Response playerRes;
+          var playerRes;
           
           // Try with cookie first
           if (fireplayerCookie != null) {

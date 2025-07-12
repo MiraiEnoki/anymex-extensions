@@ -1,9 +1,9 @@
 import '../../../../../model/source.dart';
 
 Source get animepaheSource => _animepaheSource;
-const _animepaheVersion = "0.0.75";
+const _animepaheVersion = "0.0.76";
 const _animepaheSourceCodeUrl =
-    "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/$branchName/dart/anime/src/en/animepahe/animepahe.dart";
+    "https://raw.githubusercontent.com/MiraiEnoki/anymex-extensions/$branchName/dart/anime/src/en/animepahe/animepahe.dart";
 Source _animepaheSource = Source(
   name: "AnimePahe",
   baseUrl: "https://www.animepahe.ru",
