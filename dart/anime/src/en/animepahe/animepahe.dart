@@ -10,9 +10,7 @@ class AnimePahe extends MProvider {
   final Client client = Client();
 
   @override
-  String get baseUrl =>
-      "https://animepaheproxy.phisheranimepahe.workers.dev/?url=" +
-      getPreferenceValue(source.id, "preferred_domain");
+  String get baseUrl => getPreferenceValue(source.id, "preferred_domain");
 
   @override
   Map<String, String> get headers => {'cookie': '__ddg1_=;__ddg2_=;'};
